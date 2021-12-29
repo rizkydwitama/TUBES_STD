@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1640791979 source:c:\users\widia\onedrive - telkom university\kuliah\semester 3\struktur data\tubes\tubes kikik najib\main.cpp
+	<iostream>
+	"parent.h"
+	"child.h"
+
+1640789288 source:c:\users\widia\onedrive - telkom university\kuliah\semester 3\struktur data\tubes\tubes kikik najib\parent.cpp
+	"parent.h"
+
+1640784044 c:\users\widia\onedrive - telkom university\kuliah\semester 3\struktur data\tubes\tubes kikik najib\parent.h
+	<iostream>
+	"child.h"
+
+1640785869 c:\users\widia\onedrive - telkom university\kuliah\semester 3\struktur data\tubes\tubes kikik najib\child.h
+	<iostream>
+
+1640787817 source:c:\users\widia\onedrive - telkom university\kuliah\semester 3\struktur data\tubes\tubes kikik najib\child.cpp
+	"child.h"
+
