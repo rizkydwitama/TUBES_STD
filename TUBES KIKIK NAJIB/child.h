@@ -8,6 +8,7 @@ using namespace std;
 #define prev(P) P->prev
 #define first(L) L.first
 #define info(P) P->info
+#define NIL NULL
 
 struct mahasiswa {
     string namaMhs, nimMhs, asalKls, jenisMhs;

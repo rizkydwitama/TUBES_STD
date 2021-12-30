@@ -45,6 +45,7 @@ void insertLast(List_parent &L, address_parent P);
 void deleteFirst(List_parent &L, address_parent &P);
 void deleteLast(List_parent &L, address_parent &P);
 void deleteAfter(List_parent &L, address_parent Prec, address_parent &P);
+int selectMenu();
 
 
 /** PERLU MODIFIKASI */

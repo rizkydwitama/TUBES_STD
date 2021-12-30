@@ -22,13 +22,26 @@ void insertFirst(List_child &L, address_child P) {
     }
 }
 
+void deleteFirst(List_child &L, address_child &P){
+    P = first(L);
+    if (next(first(L)) == NIL) {
+        first(L) = NIL;
+    }else{
+        first(L) = next(first(L));
+        prev(first(L)) = NIL;
+        next(P) = NIL;
+    }
+}
+
 void printInfo(List_child L) {
     address_child P = first(L);
-    while(P !=NULL) {
-        cout<<"->"<<info(P).namaMhs<<endl;
-        cout<<"->"<<info(P).nimMhs<<endl;
-        cout<<"->"<<info(P).asalKls<<endl;
-        cout<<"->"<<info(P).jenisMhs<<endl;
+    while(P != NULL) {
+        cout<<"->";
+        cout<<"Nama Mahasiswa: "<<info(P).namaMhs<<endl;
+        cout<<"NIM Mahasiswa: "<<info(P).nimMhs<<endl;
+        cout<<"Asal Kelas: "<<info(P).asalKls<<endl;
+        cout<<"Jenis Mahasiswa: "<<info(P).jenisMhs<<endl;
+        cout<<endl;
         P = next(P);
     }
 }
