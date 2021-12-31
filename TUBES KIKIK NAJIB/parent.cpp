@@ -99,6 +99,7 @@ int selectMenu() {
     cout << "7. Menampilkan Matkul beserta Mahasiswa" << endl;
     cout << "8. Menghapus Mata Kuliah Tertentu" << endl;
     cout << "9. Menghapus Mahasiswa Tertentu" << endl;
+    cout << "10. Menghapus Matakuliah beserta Mahasiswanya" << endl;
     cout << "0. Exit" << endl;
     cout << "Pilihan Menu: ";
 

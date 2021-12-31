@@ -29,10 +29,11 @@ int main()
             cout << "Masukkan Jumlah Matkul: ";
             cin >> jmlMK;
             while (i < jmlMK) {
+                cin.ignore();
                 cout << "Masukkan Mata Kuliah: ";
-                cin >> x.namaMK;
+                getline(cin, x.namaMK);
                 cout << "Masukkan Nama Kelas: ";
-                cin >> x.namaKls;
+                getline(cin, x.namaKls);
                 cout << "Masukkan Kuota Maksimal: ";
                 cin >> x.kuotaMaks;
                 cout << "Masukkan Jenis Mahasiswa: ";
@@ -52,12 +53,13 @@ int main()
             cout << "Masukkan Jumlah Mahasiswa: ";
             cin >> jmlMhs;
             while(i < jmlMhs){
+                cin.ignore();
                 cout << "Masukkan Nama Mahasiswa: ";
-                cin >> y.namaMhs;
+                getline(cin, y.namaMhs);
                 cout << "Masukkan NIM Mahasiswa: ";
-                cin >> y.nimMhs;
+                getline(cin, y.nimMhs);
                 cout << "Masukkan Asal Kelas: ";
-                cin >> y.asalKls;
+                getline(cin, y.asalKls);
                 cout << "Masukkan Jenis Mahasiswa: ";
                 cin >> y.jenisMhs;
                 cout << endl;
@@ -73,11 +75,12 @@ int main()
 
         case 5: ///(DONE!!)
             cout<<"Masukkan Nama Matkul : ";
-            cin>>x.namaMK;
+            cin.ignore();
+            getline(cin, x.namaMK);
             findElm(LP, x);
 
             cout<<"Masukkan Nama Mahasiswa : ";
-            cin>>y.namaMhs;
+            getline(cin, y.namaMhs);
             findElm(LC, y);
             cout<<endl;
 
@@ -86,14 +89,6 @@ int main()
                 cout << "Mahasiswa Sudah Ditambahkan!" << endl;
             } else {
                 cout << "Jenis Mahasiswa Harus Sama!" << endl;
-                cout<<"Masukkan Nama Matkul : ";
-                cin>>x.namaMK;
-                findElm(LP, x);
-
-                cout<<"Masukkan Nama Mahasiswa : ";
-                cin>>y.namaMhs;
-                findElm(LC, y);
-                cout<<endl;
             }
             break;
 
@@ -107,17 +102,28 @@ int main()
 
         case 8:
             cout<<"Masukkan Nama Matkul : ";
-            cin>>x.namaMK;
+            cin.ignore();
+            getline(cin, x.namaMK);
             findElm(LP, x);
             deleteFirst(LP, P);
             printInfo(LP);
             break;
         case 9:
             cout<<"Masukkan Nama Mahasiswa : ";
-            cin>>y.namaMhs;
+            cin.ignore();
+            getline(cin, y.namaMhs);
             findElm(LC, y);
             deleteFirst(LC, C);
             printInfo(LC);
+            break;
+
+        case 10:
+            cout << "Masukkan Nama Matkul: ";
+            cin.ignore();
+            getline(cin, x.namaMK);
+            findElm(LP, x);
+            deleteFirstParent(LP, P);
+            printInfo(LP);
             break;
         }
 
