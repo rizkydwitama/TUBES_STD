@@ -54,15 +54,20 @@ void deleteFirst(List_parent &L, address_parent &P){
 
 void printInfo(List_parent L) {
     address_parent P = first(L);
-    while(P != NULL) {
-        cout << "Nama Mata Kuliah: " << info(P).namaMK << endl;
-        cout << "Nama Kelas: " << info(P).namaKls << endl;
-        cout << "Kuota Maksimal: " << info(P).kuotaMaks << endl;
-        cout << "Jenis Mahasiswa: " << info(P).jenisMhs << endl;
+    if(P != NULL){
+        while(P != NULL) {
+            cout << "Nama Mata Kuliah: " << info(P).namaMK << endl;
+            cout << "Nama Kelas: " << info(P).namaKls << endl;
+            cout << "Kuota Maksimal: " << info(P).kuotaMaks << endl;
+            cout << "Jenis Mahasiswa: " << info(P).jenisMhs << endl;
+            cout << endl;
+            printInfo(child(P));
+            P = next(P);
+        }
+    }else{
         cout << endl;
-        printInfo(child(P));
-        P = next(P);
-
+        cout <<"List Matkul Kosong!"<< endl;
+        cout << endl;
     }
 }
 

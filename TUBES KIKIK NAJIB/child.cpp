@@ -47,14 +47,20 @@ void insertLast(List_child &L, address_child P) {
 
 void printInfo(List_child L) {
     address_child P = first(L);
-    while(P != NULL) {
-        cout<<"->";
-        cout<<"Nama Mahasiswa: "<<info(P).namaMhs<<endl;
-        cout<<"NIM Mahasiswa: "<<info(P).nimMhs<<endl;
-        cout<<"Asal Kelas: "<<info(P).asalKls<<endl;
-        cout<<"Jenis Mahasiswa: "<<info(P).jenisMhs<<endl;
-        cout<<endl;
-        P = next(P);
+    if(P != NULL){
+        while(P != NULL) {
+            cout<<"->";
+            cout<<"Nama Mahasiswa: "<<info(P).namaMhs<<endl;
+            cout<<"NIM Mahasiswa: "<<info(P).nimMhs<<endl;
+            cout<<"Asal Kelas: "<<info(P).asalKls<<endl;
+            cout<<"Jenis Mahasiswa: "<<info(P).jenisMhs<<endl;
+            cout<<endl;
+            P = next(P);
+        }
+    }else{
+        cout << endl;
+        cout <<"List Mahasiswa Kosong!"<< endl;
+        cout << endl;
     }
 }
 

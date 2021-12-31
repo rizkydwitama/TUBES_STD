@@ -23,7 +23,7 @@ int main()
     while (pilihan != 0) {
         int i = 0;
         char jawab;
-        int jmlMK;
+        int jmlMK,jmlMhs;
         switch(pilihan) {
         case 1: ///(DONE!!)
             cout << "Masukkan Jumlah Matkul: ";
@@ -49,18 +49,22 @@ int main()
             break;
 
         case 3: ///(DONE!!)
-            cout << "Masukkan Nama Mahasiswa: ";
-            cin >> y.namaMhs;
-            cout << "Masukkan NIM Mahasiswa: ";
-            cin >> y.nimMhs;
-            cout << "Masukkan Asal Kelas: ";
-            cin >> y.asalKls;
-            cout << "Masukkan Jenis Mahasiswa: ";
-            cin >> y.jenisMhs;
-            cout << endl;
-            C = alokasi(y);
-            insertLast(LC, C);
-
+            cout << "Masukkan Jumlah Mahasiswa: ";
+            cin >> jmlMhs;
+            while(i < jmlMhs){
+                cout << "Masukkan Nama Mahasiswa: ";
+                cin >> y.namaMhs;
+                cout << "Masukkan NIM Mahasiswa: ";
+                cin >> y.nimMhs;
+                cout << "Masukkan Asal Kelas: ";
+                cin >> y.asalKls;
+                cout << "Masukkan Jenis Mahasiswa: ";
+                cin >> y.jenisMhs;
+                cout << endl;
+                C = alokasi(y);
+                insertLast(LC, C);
+                i++;
+            }
             break;
 
         case 4: ///(DONE!!)
@@ -99,6 +103,7 @@ int main()
 
         case 7:
             printInfo(LP);
+            break;
 
         case 8:
             cout<<"Masukkan Nama Matkul : ";
@@ -106,12 +111,14 @@ int main()
             findElm(LP, x);
             deleteFirst(LP, P);
             printInfo(LP);
+            break;
         case 9:
             cout<<"Masukkan Nama Mahasiswa : ";
             cin>>y.namaMhs;
             findElm(LC, y);
             deleteFirst(LC, C);
             printInfo(LC);
+            break;
         }
 
         cout << "Kembali ke menu utama ? (Y/N)" << endl;

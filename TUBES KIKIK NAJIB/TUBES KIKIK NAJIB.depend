@@ -25,3 +25,29 @@
 	"parent.h"
 	"child.h"
 
+1640928208 source:d:\tubes_std-main\tubes kikik najib\child.cpp
+	"child.h"
+
+1640928208 d:\tubes_std-main\tubes kikik najib\child.h
+	<iostream>
+
+1640930765 source:d:\tubes_std-main\tubes kikik najib\main.cpp
+	<iostream>
+	"parent.h"
+	"child.h"
+	"relasi.h"
+
+1640928208 d:\tubes_std-main\tubes kikik najib\parent.h
+	<iostream>
+	"child.h"
+
+1640928208 d:\tubes_std-main\tubes kikik najib\relasi.h
+	"parent.h"
+	"child.h"
+
+1640931371 source:d:\tubes_std-main\tubes kikik najib\parent.cpp
+	"parent.h"
+
+1640928208 source:d:\tubes_std-main\tubes kikik najib\relasi.cpp
+	"relasi.h"
+
