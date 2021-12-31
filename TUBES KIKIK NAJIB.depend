@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1640921499 source:c:\users\widia\onedrive - telkom university\kuliah\semester 3\struktur data\tubes\tubes kikik najib\main.cpp
+	<iostream>
+	"parent.h"
+	"child.h"
+	"relasi.h"
+
+1640920985 source:c:\users\widia\onedrive - telkom university\kuliah\semester 3\struktur data\tubes\tubes kikik najib\parent.cpp
+	"parent.h"
+
+1640875738 c:\users\widia\onedrive - telkom university\kuliah\semester 3\struktur data\tubes\tubes kikik najib\parent.h
+	<iostream>
+	"child.h"
+
+1640917316 c:\users\widia\onedrive - telkom university\kuliah\semester 3\struktur data\tubes\tubes kikik najib\child.h
+	<iostream>
+
+1640921499 source:c:\users\widia\onedrive - telkom university\kuliah\semester 3\struktur data\tubes\tubes kikik najib\child.cpp
+	"child.h"
+
+1640917640 source:c:\users\widia\onedrive - telkom university\kuliah\semester 3\struktur data\tubes\tubes kikik najib\relasi.cpp
+	"relasi.h"
+
+1640916964 c:\users\widia\onedrive - telkom university\kuliah\semester 3\struktur data\tubes\tubes kikik najib\relasi.h
+	"parent.h"
+	"child.h"
+
+1640928208 source:d:\tubes_std-main\tubes kikik najib\child.cpp
+	"child.h"
+
+1640928208 d:\tubes_std-main\tubes kikik najib\child.h
+	<iostream>
+
+1640930765 source:d:\tubes_std-main\tubes kikik najib\main.cpp
+	<iostream>
+	"parent.h"
+	"child.h"
+	"relasi.h"
+
+1640928208 d:\tubes_std-main\tubes kikik najib\parent.h
+	<iostream>
+	"child.h"
+
+1640928208 d:\tubes_std-main\tubes kikik najib\relasi.h
+	"parent.h"
+	"child.h"
+
+1640931371 source:d:\tubes_std-main\tubes kikik najib\parent.cpp
+	"parent.h"
+
+1640928208 source:d:\tubes_std-main\tubes kikik najib\relasi.cpp
+	"relasi.h"
+
