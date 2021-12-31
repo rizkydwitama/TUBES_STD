@@ -33,6 +33,18 @@ void deleteFirst(List_child &L, address_child &P){
     }
 }
 
+void insertLast(List_child &L, address_child P) {
+    if (first(L) == NIL) {
+        first(L) = P;
+    } else {
+        address_child Q = first(L);
+        while (next(Q) != NIL) {
+            Q = next(Q);
+        }
+        next(Q) = P;
+    }
+}
+
 void printInfo(List_child L) {
     address_child P = first(L);
     while(P != NULL) {
@@ -49,7 +61,7 @@ void printInfo(List_child L) {
 address_child findElm(List_child L, infotype_child x) {
     address_child P = first(L);
     while(P != NULL) {
-        if(info(P).jenisMhs == x.jenisMhs) {
+        if(info(P).namaMhs == x.namaMhs) {
             return P;
         }
         P = next(P);

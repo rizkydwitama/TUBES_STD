@@ -22,10 +22,10 @@ int main()
     pilihan = selectMenu();
     while (pilihan != 0) {
         int i = 0;
-        char jawab = 'Y';
+        char jawab;
         int jmlMK;
         switch(pilihan) {
-        case 1:
+        case 1: ///(DONE!!)
             cout << "Masukkan Jumlah Matkul: ";
             cin >> jmlMK;
             while (i < jmlMK) {
@@ -39,16 +39,16 @@ int main()
                 cin >> x.jenisMhs;
                 cout << endl;
                 P = alokasi(x);
-                insertFirst(LP, P);
+                insertLast(LP, P);
                 i++;
             }
             break;
 
-        case 2:
+        case 2: ///(DONE!!)
             printInfo(LP);
             break;
 
-        case 3:
+        case 3: ///(DONE!!)
             cout << "Masukkan Nama Mahasiswa: ";
             cin >> y.namaMhs;
             cout << "Masukkan NIM Mahasiswa: ";
@@ -59,35 +59,67 @@ int main()
             cin >> y.jenisMhs;
             cout << endl;
             C = alokasi(y);
-            insertFirst(LC, C);
+            insertLast(LC, C);
 
             break;
 
-        case 4:
+        case 4: ///(DONE!!)
             printInfo(LC);
             break;
 
-        case 5:
-            cout<<"masukan nama matkul : ";
+        case 5: ///(DONE!!)
+            cout<<"Masukkan Nama Matkul : ";
             cin>>x.namaMK;
-            P = findElm(LP, x);
+            findElm(LP, x);
+
+            cout<<"Masukkan Nama Mahasiswa : ";
+            cin>>y.namaMhs;
+            findElm(LC, y);
             cout<<endl;
 
-            cout<<"masukan nama mahasiswa : ";
-            cin>>y.namaMhs;
-            C = findElm(LC, y);
-            cout<<endl;
-            insertFirst(child(P), alokasi(y));
-            printInfo(LP);
+            if (x.jenisMhs == y.jenisMhs) {
+                insertLast(child(P), alokasi(y));
+                cout << "Mahasiswa Sudah Ditambahkan!" << endl;
+            } else {
+                cout << "Jenis Mahasiswa Harus Sama!" << endl;
+                cout<<"Masukkan Nama Matkul : ";
+                cin>>x.namaMK;
+                findElm(LP, x);
+
+                cout<<"Masukkan Nama Mahasiswa : ";
+                cin>>y.namaMhs;
+                findElm(LC, y);
+                cout<<endl;
+            }
             break;
+
+        case 6: ///(Masii eror xixixi)
+            //printAjah(LP, LC);
+            break;
+
+        case 7:
+            printInfo(LP);
+
+        case 8:
+            cout<<"Masukkan Nama Matkul : ";
+            cin>>x.namaMK;
+            findElm(LP, x);
+            deleteFirst(LP, P);
+            printInfo(LP);
+        case 9:
+            cout<<"Masukkan Nama Mahasiswa : ";
+            cin>>y.namaMhs;
+            findElm(LC, y);
+            deleteFirst(LC, C);
+            printInfo(LC);
         }
 
         cout << "Kembali ke menu utama ? (Y/N)" << endl;
         cin >> jawab;
-        if(jawab){
+        if(jawab == 'Y' || jawab == 'y'){
             pilihan = selectMenu();
         } else {
-            break;
+            cout << "ANDA TELAH KELUAR DARI PROGRAM" << endl;
         }
     }
     cout << "ANDA TELAH KELUAR DARI PROGRAM" << endl;

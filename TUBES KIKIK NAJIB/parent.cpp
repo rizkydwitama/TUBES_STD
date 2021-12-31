@@ -29,6 +29,18 @@ void insertFirst(List_parent &L, address_parent P) {
     }
 }
 
+void insertLast(List_parent &L, address_parent P) {
+    if (first(L) == NIL) {
+        first(L) = P;
+    } else {
+        address_parent Q = first(L);
+        while (next(Q) != NIL) {
+            Q = next(Q);
+        }
+        next(Q) = P;
+    }
+}
+
 void deleteFirst(List_parent &L, address_parent &P){
     P = first(L);
     if (next(first(L)) == NIL) {
@@ -42,16 +54,15 @@ void deleteFirst(List_parent &L, address_parent &P){
 
 void printInfo(List_parent L) {
     address_parent P = first(L);
-    if (first(L) != NIL) {
-        do {
-            cout << "Nama Mata Kuliah: " << info(P).namaMK << endl;
-            cout << "Nama Kelas: " << info(P).namaKls << endl;
-            cout << "Kuota Maksimal: " << info(P).kuotaMaks << endl;
-            cout << "Jenis Mahasiswa: " << info(P).jenisMhs << endl;
-            cout << endl;
-            printInfo(child(P));
-            P = next(P);
-        } while ((P) != first(L));
+    while(P != NULL) {
+        cout << "Nama Mata Kuliah: " << info(P).namaMK << endl;
+        cout << "Nama Kelas: " << info(P).namaKls << endl;
+        cout << "Kuota Maksimal: " << info(P).kuotaMaks << endl;
+        cout << "Jenis Mahasiswa: " << info(P).jenisMhs << endl;
+        cout << endl;
+        printInfo(child(P));
+        P = next(P);
+
     }
 }
 
@@ -64,7 +75,7 @@ address_parent findElm(List_parent L, infotype_parent x) {
     */
     address_parent P = first(L);
     do {
-        if(info(P).jenisMhs == x.jenisMhs) {
+        if(info(P).namaMK == x.namaMK) {
             return P;
         }
         P = next(P);
@@ -80,7 +91,9 @@ int selectMenu() {
     cout << "4. Menampilkan Mahasiswa" << endl;
     cout << "5. Memasangkan Matkul dengan Mahasiswa" << endl;
     cout << "6. Memutuskan Matkul dengan Mahasiswa" << endl;
-    cout << "7. Menampilkan Matkul dengan Mahasiswa" << endl;
+    cout << "7. Menampilkan Matkul beserta Mahasiswa" << endl;
+    cout << "8. Menghapus Mata Kuliah Tertentu" << endl;
+    cout << "9. Menghapus Mahasiswa Tertentu" << endl;
     cout << "0. Exit" << endl;
     cout << "Pilihan Menu: ";
 
